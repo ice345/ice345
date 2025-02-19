@@ -8,4 +8,4 @@
 - 🌀: At the same time, I used alist to build my own 🏠 storage server (and built a distributed storage cluster)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ice345&show_icons=true&count_private=true&theme=react)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ice345&theme=react)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ice345&theme=react&hide=javascript, html, css)
