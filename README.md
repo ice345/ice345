@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on `study` 😉😉
 - 🌱 I’m currently learning `linux kernel`, ` LFS `, `some basic systems` 🧀 
-- 🤔 I’m looking for help with **how to get started and learn the Linux system in depth, because I only know how to use it at this stage (a Linux administrator is a novice) ** 😕
+- 🤔 I’m looking for help with **how to get started and learn the Linux system in depth, because I only know how to use it at this stage (a Linux administrator is a novice)** 😕
 - ⚡ Fun fact: I'm a Japanese anime fan, welcome to discuss Japanese comics with me
 - 💠:  I built my own blog, this is my web: [ICEのBlog](https://myblog.050626.xyz). 
 - 🌀: At the same time, I used alist to build my own 🏠 storage server (and built a distributed storage cluster)
