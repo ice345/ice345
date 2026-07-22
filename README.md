@@ -22,7 +22,7 @@
   <a href="https://github.com/ice345"><img alt="GitHub profile" src="https://img.shields.io/badge/GitHub-ice345-5D82B3?style=flat-square&amp;logo=github&amp;logoColor=white" /></a>
   <a href="https://myblog.050626.xyz"><img alt="ICEのBlog" src="https://img.shields.io/badge/ICE%E3%81%AEBlog-Visit-D59AAD?style=flat-square" /></a>
   <a href="https://github.com/ice345/markdown-table-wrap.nvim"><img alt="markdown-table-wrap.nvim" src="https://img.shields.io/badge/Neovim-markdown--table--wrap.nvim-D6A64B?style=flat-square&amp;logo=neovim&amp;logoColor=white" /></a>
-  <a href="https://github.com/ice345/Anime-horizon_pro"><img alt="Anime Horizon" src="https://img.shields.io/badge/Anime-Horizon-7FA6C9?style=flat-square&amp;logo=react&amp;logoColor=white" /></a>
+  <a href="https://anime.050626.xyz/"><img alt="Anime Horizon live site" src="https://img.shields.io/badge/Anime-Horizon-7FA6C9?style=flat-square&amp;logo=react&amp;logoColor=white" /></a>
 </p>
 
 ## About Me
@@ -43,29 +43,39 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 ## Featured Projects
 
-### [markdown-table-wrap.nvim](https://github.com/ice345/markdown-table-wrap.nvim)
+<a href="https://github.com/ice345/markdown-table-wrap.nvim">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/markdown-table-wrap-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/markdown-table-wrap-light.svg" />
+    <img src="./assets/projects/markdown-table-wrap-light.svg" alt="markdown-table-wrap.nvim — a Neovim plugin for readable wrapped Markdown tables" width="100%" />
+  </picture>
+</a>
 
-`Lua` · `Neovim` · `extmarks` · `virtual text`
+<a href="https://anime.050626.xyz/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/anime-horizon-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/anime-horizon-light.svg" />
+    <img src="./assets/projects/anime-horizon-light.svg" alt="Anime Horizon — an anime discovery and seasonal guide" width="100%" />
+  </picture>
+</a>
 
-A Neovim plugin that renders readable, wrapped Markdown tables without modifying the source buffer. It accounts for mixed Chinese, English, and Japanese display widths while keeping the editing experience native to Neovim.
+<a href="https://github.com/ice345/anishell">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/anishell-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/anishell-light.svg" />
+    <img src="./assets/projects/anishell-light.svg" alt="AniShell — a small Unix shell written in Rust" width="100%" />
+  </picture>
+</a>
 
-### [Anime Horizon](https://github.com/ice345/Anime-horizon_pro)
+<a href="https://github.com/ice345/dotfiles">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/dotfiles-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/dotfiles-light.svg" />
+    <img src="./assets/projects/dotfiles-light.svg" alt="dotfiles — cross-platform Linux and macOS configuration managed with chezmoi" width="100%" />
+  </picture>
+</a>
 
-`TypeScript` · `React` · `Vite` · `AniList API`
-
-An anime discovery and seasonal guide built with React, AniList data, local caching, and AI-assisted recommendations.
-
-### [AniShell](https://github.com/ice345/anishell)
-
-`Rust` · `Unix` · `CLI` · `testing`
-
-A small Unix shell written in Rust with pipelines, redirections, variables, globbing, history, and completion.
-
-### [dotfiles](https://github.com/ice345/dotfiles)
-
-`chezmoi` · `Linux` · `macOS` · `Neovim`
-
-Cross-platform Linux and macOS configuration managed with chezmoi, including Neovim, Yazi, Kitty, Starship, and Hyprland.
+<p align="center"><sub>Anime Horizon opens the live site · <a href="https://github.com/ice345/Anime-horizon_pro">source repository</a></sub></p>
 
 ## Languages & Tools
 
@@ -73,14 +83,14 @@ Cross-platform Linux and macOS configuration managed with chezmoi, including Neo
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://skillicons.dev/icons?i=rust,lua,ts,react,vite,nodejs,linux,neovim,bash,git,githubactions,docker&amp;theme=dark"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=dark"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://skillicons.dev/icons?i=rust,lua,ts,react,vite,nodejs,linux,neovim,bash,git,githubactions,docker&amp;theme=light"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=light"
     />
     <img
-      src="https://skillicons.dev/icons?i=rust,lua,ts,react,vite,nodejs,linux,neovim,bash,git,githubactions,docker&amp;theme=light"
+      src="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=light"
       alt="Rust, Lua, TypeScript, React, Vite, Node.js, Linux, Neovim, Bash, Git, GitHub Actions, and Docker"
     />
   </picture>
@@ -94,20 +104,21 @@ Cross-platform Linux and macOS configuration managed with chezmoi, including Neo
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ice345&amp;layout=compact&amp;langs_count=5&amp;hide_border=true&amp;size_weight=0.5&amp;count_weight=0.5&amp;hide=html,css&amp;exclude_repo=alist,claude-code,comments,crkbd,cs61a,darwin-xnu,dotfiles,foreign-trade,ice345,ice345.github.io,My-IPTV,OCaml_Study,picture_share,Rust,scholat,subscription,xv6-riscv-src_development&amp;theme=tokyonight&amp;bg_color=00000000"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-dark.svg"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ice345&amp;layout=compact&amp;langs_count=5&amp;hide_border=true&amp;size_weight=0.5&amp;count_weight=0.5&amp;hide=html,css&amp;exclude_repo=alist,claude-code,comments,crkbd,cs61a,darwin-xnu,dotfiles,foreign-trade,ice345,ice345.github.io,My-IPTV,OCaml_Study,picture_share,Rust,scholat,subscription,xv6-riscv-src_development&amp;theme=default&amp;bg_color=00000000"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
     />
     <img
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=ice345&amp;layout=compact&amp;langs_count=5&amp;hide_border=true&amp;size_weight=0.5&amp;count_weight=0.5&amp;hide=html,css&amp;exclude_repo=alist,claude-code,comments,crkbd,cs61a,darwin-xnu,dotfiles,foreign-trade,ice345,ice345.github.io,My-IPTV,OCaml_Study,picture_share,Rust,scholat,subscription,xv6-riscv-src_development&amp;theme=default&amp;bg_color=00000000"
-      alt="Most used languages in selected original projects"
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
+      alt="Language distribution across selected original projects"
+      width="100%"
     />
   </picture>
 </div>
 
-<p align="center"><sub>Language statistics are limited to selected original projects and do not represent overall proficiency.</sub></p>
+<p align="center"><sub>Generated daily from selected original projects; language share describes repository files, not proficiency.</sub></p>
 
 ## Contribution Snake
 
