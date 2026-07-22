@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate profile activity assets
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: contribution-snake
+  group: profile-activity-assets
   cancel-in-progress: true
 
 jobs:
@@ -19,23 +19,29 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Check out the profile repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
+      - name: Generate selected-project language cards
+        run: node .github/scripts/generate-language-card.mjs
+        env:
+          GITHUB_OWNER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate light and dark snake SVGs
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake-light.svg?color_snake=#D6A64B&color_dots=#F8FAF7,#DCE8D3,#A9D8E8,#7FA6C9,#5D82B3
             dist/github-snake-dark.svg?color_snake=#E6BD68&color_dots=#252B46,#334462,#4E6686,#7FA6C9,#B8D5E8
 
-      - name: Publish SVGs to the output branch
+      - name: Publish profile SVGs to the output branch
         uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: ./dist
           force_orphan: true
-          full_commit_message: "chore: update contribution snake"
+          full_commit_message: "chore: update profile activity assets"

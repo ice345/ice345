@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
+  <title id="title">markdown-table-wrap.nvim</title>
+  <desc id="desc">A Neovim plugin for readable wrapped Markdown tables.</desc>
+  <rect x="1" y="1" width="958" height="174" rx="18" fill="#252B46" stroke="#334462" stroke-width="2"/>
+  <path d="M0 37h960M0 45h960M0 53h960M0 61h960M0 69h960" stroke="#7FA6C9" opacity=".1"/>
+  <rect x="25" y="24" width="5" height="128" rx="2.5" fill="#E6BD68"/>
+  <circle cx="58" cy="48" r="12" fill="#334462"/><path d="M51 49l5 5 10-13" fill="none" stroke="#9AC1DE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="82" y="54" fill="#E9EEF3" font-size="24" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">markdown-table-wrap.nvim</text>
+  <rect x="751" y="27" width="177" height="29" rx="14.5" fill="#344B4A"/><text x="839.5" y="47" text-anchor="middle" fill="#BFE0C6" font-size="12" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">ACTIVE · NEOVIM</text>
+  <text x="48" y="91" fill="#C4D0DC" font-size="16" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Readable wrapped Markdown tables without changing the source buffer.</text>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">
+    <rect x="48" y="116" width="52" height="28" rx="8" fill="#334462"/><text x="74" y="135" text-anchor="middle" fill="#A9CCE5">Lua</text>
+    <rect x="108" y="116" width="76" height="28" rx="8" fill="#334462"/><text x="146" y="135" text-anchor="middle" fill="#A9CCE5">Neovim</text>
+    <rect x="192" y="116" width="83" height="28" rx="8" fill="#4B4335"/><text x="233.5" y="135" text-anchor="middle" fill="#E6BD68">extmarks</text>
+    <rect x="283" y="116" width="112" height="28" rx="8" fill="#4B4335"/><text x="339" y="135" text-anchor="middle" fill="#E6BD68">virtual text</text>
+  </g>
+  <text x="912" y="136" text-anchor="end" fill="#7FA6C9" font-size="25" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">| → { }</text>
+</svg>

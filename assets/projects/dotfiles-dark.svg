@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
+  <title id="title">dotfiles</title>
+  <desc id="desc">Cross-platform Linux and macOS configuration managed with chezmoi.</desc>
+  <rect x="1" y="1" width="958" height="174" rx="18" fill="#252B46" stroke="#334462" stroke-width="2"/>
+  <rect x="25" y="24" width="5" height="128" rx="2.5" fill="#7FA6C9"/>
+  <circle cx="67" cy="49" r="18" fill="#334462"/><path d="M57 49h20M67 39v20" stroke="#9AC1DE" stroke-width="2.5" stroke-linecap="round"/><circle cx="67" cy="49" r="5" fill="#252B46" stroke="#9AC1DE" stroke-width="2"/>
+  <text x="106" y="54" fill="#E9EEF3" font-size="24" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">dotfiles</text>
+  <rect x="732" y="27" width="196" height="29" rx="14.5" fill="#344B4A"/><text x="830" y="47" text-anchor="middle" fill="#BFE0C6" font-size="12" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">MAINTAINED · CONFIG</text>
+  <text x="48" y="91" fill="#C4D0DC" font-size="16" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Cross-platform Linux and macOS configuration managed with chezmoi.</text>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">
+    <rect x="48" y="116" width="79" height="28" rx="8" fill="#344B4A"/><text x="87.5" y="135" text-anchor="middle" fill="#BFE0C6">chezmoi</text>
+    <rect x="135" y="116" width="76" height="28" rx="8" fill="#334462"/><text x="173" y="135" text-anchor="middle" fill="#A9CCE5">Neovim</text>
+    <rect x="219" y="116" width="52" height="28" rx="8" fill="#513D4A"/><text x="245" y="135" text-anchor="middle" fill="#DDB0C0">Yazi</text>
+    <rect x="279" y="116" width="84" height="28" rx="8" fill="#4B4335"/><text x="321" y="135" text-anchor="middle" fill="#E6BD68">Hyprland</text>
+  </g>
+  <path d="M782 121c22-35 43-35 65 0s43 35 65 0" fill="none" stroke="#7FA6C9" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+  <circle cx="782" cy="121" r="4" fill="#D59AAD"/><circle cx="847" cy="121" r="4" fill="#E6BD68"/><circle cx="912" cy="121" r="4" fill="#7FA6C9"/>
+</svg>
