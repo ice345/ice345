@@ -80,27 +80,85 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 ## Languages & Tools
 
 <div align="center">
+  <p><strong>Languages · used and learning</strong></p>
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=dark"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=dark&amp;perline=10"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=light"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=light&amp;perline=10"
     />
     <img
-      src="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Creact%2Cvite%2Cnodejs%2Clinux%2Cneovim%2Cbash%2Cgit%2Cgithubactions%2Cdocker&amp;theme=light"
-      alt="Rust, Lua, TypeScript, React, Vite, Node.js, Linux, Neovim, Bash, Git, GitHub Actions, and Docker"
+      src="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=light&amp;perline=10"
+      alt="Rust, Lua, TypeScript, JavaScript, Python, C, OCaml, Go, Bash, and Markdown"
+    />
+  </picture>
+
+  <p><strong>Web · runtime</strong></p>
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=dark&amp;perline=5"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=light&amp;perline=5"
+    />
+    <img
+      src="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=light&amp;perline=5"
+      alt="React, Vite, Node.js, HTML, and CSS"
+    />
+  </picture>
+
+  <p><strong>Environment · workflow</strong></p>
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://skillicons.dev/icons?i=linux%2Carch%2Capple%2Cneovim%2Cvscode%2Cgit%2Cgithub%2Cgithubactions%2Cdocker&amp;theme=dark&amp;perline=9"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://skillicons.dev/icons?i=linux%2Carch%2Capple%2Cneovim%2Cvscode%2Cgit%2Cgithub%2Cgithubactions%2Cdocker&amp;theme=light&amp;perline=9"
+    />
+    <img
+      src="https://skillicons.dev/icons?i=linux%2Carch%2Capple%2Cneovim%2Cvscode%2Cgit%2Cgithub%2Cgithubactions%2Cdocker&amp;theme=light&amp;perline=9"
+      alt="Linux, Arch Linux, macOS, Neovim, VS Code, Git, GitHub, GitHub Actions, and Docker"
     />
   </picture>
 </div>
 
-<p align="center"><sub>Currently exploring: C · Go · OCaml</sub></p>
+<p align="center"><sub>Current study focus: Linux kernel · eBPF · systems programming · Go · OCaml</sub></p>
+
+<p align="center">
+  <a href="https://github.com/ice345"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-ice345-5D82B3?style=flat-square&amp;logo=github&amp;logoColor=white" /></a>
+  <a href="https://myblog.050626.xyz"><img alt="Blog" src="https://img.shields.io/badge/Blog-ICE%E3%81%AEBlog-D59AAD?style=flat-square" /></a>
+  <img alt="Discord" src="https://img.shields.io/badge/Community-Discord-7FA6C9?style=flat-square&amp;logo=discord&amp;logoColor=white" />
+  <img alt="Reddit" src="https://img.shields.io/badge/Community-Reddit-D6A64B?style=flat-square&amp;logo=reddit&amp;logoColor=white" />
+</p>
 
 ## GitHub Activity
 
 <div align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
+    />
+    <img
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
+      alt="GitHub overview showing original repositories, stars, commits, and pull requests"
+      width="100%"
+    />
+  </picture>
+
+  <br />
+
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -118,7 +176,7 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   </picture>
 </div>
 
-<p align="center"><sub>Generated daily from selected original projects; language share describes repository files, not proficiency.</sub></p>
+<p align="center"><sub>Generated daily from public GitHub data. Rolling activity covers the previous 12 months; language share describes repository files, not proficiency.</sub></p>
 
 ## Contribution Snake
 
@@ -146,7 +204,15 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 - 響け！ユーフォニアム
 - リズと青い鳥
+- やはり俺の青春ラブコメはまちがっている
+- 青春ブタ野郎
+- 古典部
+- カタオモイ
+- 願い〜あの頃のキミへ〜
+- NIGHT DANCE
+- Anytime Anywhere
+- クズり念
 
-Finding resonance between music, systems, and code.
+Finding resonance between anime, music, systems, and code.
 
 <p align="center"><sub>小さな一歩を、確かな響きへ。</sub></p>
