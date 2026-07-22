@@ -1,18 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
-  <title id="title">markdown-table-wrap.nvim</title>
-  <desc id="desc">A Neovim plugin for readable wrapped Markdown tables.</desc>
-  <rect x="1" y="1" width="958" height="174" rx="18" fill="#F8FAF7" stroke="#DCE8D3" stroke-width="2"/>
-  <path d="M0 37h960M0 45h960M0 53h960M0 61h960M0 69h960" stroke="#A9D8E8" opacity=".13"/>
-  <rect x="25" y="24" width="5" height="128" rx="2.5" fill="#D6A64B"/>
-  <circle cx="58" cy="48" r="12" fill="#DCE8D3"/><path d="M51 49l5 5 10-13" fill="none" stroke="#5D82B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="82" y="54" fill="#252B46" font-size="24" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">markdown-table-wrap.nvim</text>
-  <rect x="751" y="27" width="177" height="29" rx="14.5" fill="#EAF2E5"/><text x="839.5" y="47" text-anchor="middle" fill="#4F7253" font-size="12" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">ACTIVE · NEOVIM</text>
-  <text x="48" y="91" fill="#4D5D70" font-size="16" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Readable wrapped Markdown tables without changing the source buffer.</text>
-  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">
-    <rect x="48" y="116" width="52" height="28" rx="8" fill="#E7EFF7"/><text x="74" y="135" text-anchor="middle" fill="#5D82B3">Lua</text>
-    <rect x="108" y="116" width="76" height="28" rx="8" fill="#E7EFF7"/><text x="146" y="135" text-anchor="middle" fill="#5D82B3">Neovim</text>
-    <rect x="192" y="116" width="83" height="28" rx="8" fill="#F2EADB"/><text x="233.5" y="135" text-anchor="middle" fill="#9B7227">extmarks</text>
-    <rect x="283" y="116" width="112" height="28" rx="8" fill="#F2EADB"/><text x="339" y="135" text-anchor="middle" fill="#9B7227">virtual text</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="176" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
+  <title id="title">markdown-table-wrap.nvim — ice345 featured project</title>
+  <desc id="desc">Readable wrapped Markdown tables without modifying the source buffer.. Lua · Neovim · extmarks · virtual text.</desc>
+  
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBFAF6"/>
+      <stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <radialGradient id="washBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#A9D8E8" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#A9D8E8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="washPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#E8B5BE" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#E8B5BE" stop-opacity="0"/>
+    </radialGradient>
+<filter id="blur20" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="958" height="174" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="1" y="1" width="958" height="174" rx="24" fill="url(#bg)"/>
+    <ellipse cx="820" cy="22" rx="225" ry="110" fill="url(#washBlue)" filter="url(#blur20)"/>
+    <ellipse cx="710" cy="175" rx="185" ry="86" fill="url(#washPink)" filter="url(#blur20)"/>
+</g>
+
+  <rect x="1" y="1" width="958" height="174" rx="24"
+        fill="none" stroke="#B8D8E5" stroke-opacity=".62"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="50" y="31" font-size="10.5" letter-spacing="2.4" fill="#67839A">04 · NEOVIM</text>
+    <text x="50" y="67" font-size="25" font-weight="650" fill="#294866">markdown-table-wrap.nvim</text>
+    <text x="50" y="94" font-size="14.3" fill="#67839A">Readable wrapped Markdown tables without modifying the source buffer.</text>
+    <text x="50" y="117" font-size="12.3" letter-spacing=".6" fill="#4F7FA8">Lua · Neovim · extmarks · virtual text</text>
+    <g transform="translate(50 145)">
+      <text x="0" y="0" font-size="11.8" fill="#294866">View repository</text>
+      <path d="M92 -4 H113 M106 -10 L113 -4 L106 2" fill="none" stroke="#C79A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 7 H115" stroke="#B8D8E5" stroke-width="1"/>
+    </g>
   </g>
-  <text x="912" y="136" text-anchor="end" fill="#5D82B3" font-size="25" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">| → { }</text>
+
+  <g aria-hidden="true">
+    <path d="M620 43 C655 41,685 45,720 43" fill="none" stroke="#B8D8E5" stroke-width=".8" opacity=".7"/><path d="M620 51 C655 49,685 53,720 51" fill="none" stroke="#B8D8E5" stroke-width=".8" opacity=".7"/><path d="M620 59 C655 57,685 61,720 59" fill="none" stroke="#B8D8E5" stroke-width=".8" opacity=".7"/><path d="M620 67 C655 65,685 69,720 67" fill="none" stroke="#B8D8E5" stroke-width=".8" opacity=".7"/><path d="M620 75 C655 73,685 77,720 75" fill="none" stroke="#B8D8E5" stroke-width=".8" opacity=".7"/>
+    <circle cx="654" cy="58" r="4" fill="#C79A45"/>
+    <path d="M658 58 V40" stroke="#C79A45" stroke-width="1.5"/>
+    <path d="M718 43 C728 46,732 52,735 59" fill="none" stroke="#4F7FA8" stroke-width="1.2"/>
+    <g transform="translate(736 31)">
+      <rect x="0" y="0" width="192" height="112" rx="10" fill="#FFFFFF" fill-opacity=".48" stroke="#B8D8E5" stroke-width="1.1"/>
+      <path d="M0 34 H192 M0 70 H192 M0 89 H192" stroke="#B8D8E5" stroke-width="1"/>
+      <path d="M70 0 V112 M126 0 V112" stroke="#B8D8E5" stroke-width="1"/>
+      <text x="12" y="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#294866">Topic</text>
+      <text x="81" y="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#294866">Notes</text>
+      <text x="137" y="22" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#294866">Width</text>
+      <path d="M12 50 H56 M12 58 H48" stroke="#67839A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M81 47 H116 M81 55 H111 M81 63 H102" stroke="#4F7FA8" stroke-width="2" stroke-linecap="round"/>
+      <path d="M137 47 H178 M137 55 H167 M137 63 H173" stroke="#E8B5BE" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 79 H56 M81 79 H112 M137 79 H177" stroke="#67839A" stroke-width="2" stroke-linecap="round"/>
+      <rect x="183" y="95" width="4" height="12" rx="1" fill="#C79A45"/>
+    </g>
+    <path d="M704 94 C720 98,726 105,736 115" fill="none" stroke="#C79A45" stroke-width="1.5"/>
+    
+    <g transform="translate(691 123) rotate(-10) scale(0.32)" opacity="0.42">
+      <path d="M0 0 C18 -12,36 -10,52 0 C34 2,18 9,0 24 C10 10,13 5,0 0Z"
+            fill="none" stroke="#4F7FA8" stroke-width="1.5"/>
+      <path d="M2 2 L46 1" stroke="#4F7FA8" stroke-width="1"/>
+      <path d="M14 1 L8 9 M24 1 L16 13 M34 1 L27 11"
+            stroke="#4F7FA8" stroke-width=".8" opacity=".7"/>
+    </g>
+    
+  </g>
 </svg>

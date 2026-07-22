@@ -1,17 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
-  <title id="title">AniShell</title>
-  <desc id="desc">A small Unix shell written in Rust.</desc>
-  <rect x="1" y="1" width="958" height="174" rx="18" fill="#252B46" stroke="#4A4337" stroke-width="2"/>
-  <rect x="25" y="24" width="5" height="128" rx="2.5" fill="#E6BD68"/>
-  <rect x="48" y="35" width="38" height="28" rx="7" fill="#4B4335"/><text x="67" y="55" text-anchor="middle" fill="#E6BD68" font-size="17" font-weight="700" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">$_</text>
-  <text x="106" y="54" fill="#E9EEF3" font-size="24" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">AniShell</text>
-  <rect x="744" y="27" width="184" height="29" rx="14.5" fill="#4B4335"/><text x="836" y="47" text-anchor="middle" fill="#E6BD68" font-size="12" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">LEARNING · SYSTEMS</text>
-  <text x="48" y="91" fill="#C4D0DC" font-size="16" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">A small Unix shell with pipelines, redirections, history, and completion.</text>
-  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">
-    <rect x="48" y="116" width="57" height="28" rx="8" fill="#563D38"/><text x="76.5" y="135" text-anchor="middle" fill="#E9B39B">Rust</text>
-    <rect x="113" y="116" width="57" height="28" rx="8" fill="#334462"/><text x="141.5" y="135" text-anchor="middle" fill="#A9CCE5">Unix</text>
-    <rect x="178" y="116" width="49" height="28" rx="8" fill="#334462"/><text x="202.5" y="135" text-anchor="middle" fill="#A9CCE5">CLI</text>
-    <rect x="235" y="116" width="62" height="28" rx="8" fill="#4B4335"/><text x="266" y="135" text-anchor="middle" fill="#E6BD68">tests</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="176" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
+  <title id="title">AniShell — ice345 featured project</title>
+  <desc id="desc">A small Unix shell with pipelines, redirections, variables, history, and completion.. Rust · Unix · CLI · Tests.</desc>
+  
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#182235"/>
+      <stop offset="1" stop-color="#222E46"/>
+    </linearGradient>
+    <radialGradient id="washBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#537D9B" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#537D9B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="washPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#D69DA8" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#D69DA8" stop-opacity="0"/>
+    </radialGradient>
+<filter id="blur20" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="958" height="174" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="1" y="1" width="958" height="174" rx="24" fill="url(#bg)"/>
+    <ellipse cx="820" cy="22" rx="225" ry="110" fill="url(#washBlue)" filter="url(#blur20)"/>
+    <ellipse cx="710" cy="175" rx="185" ry="86" fill="url(#washPink)" filter="url(#blur20)"/>
+</g>
+
+  <rect x="1" y="1" width="958" height="174" rx="24"
+        fill="none" stroke="#4B6882" stroke-opacity=".62"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="50" y="31" font-size="10.5" letter-spacing="2.4" fill="#A9BFD0">02 · SYSTEMS</text>
+    <text x="50" y="67" font-size="29" font-weight="650" fill="#EEF4F7">AniShell</text>
+    <text x="50" y="94" font-size="14.3" fill="#A9BFD0">A small Unix shell with pipelines, redirections, variables, history, and completion.</text>
+    <text x="50" y="117" font-size="12.3" letter-spacing=".6" fill="#8EC7E0">Rust · Unix · CLI · Tests</text>
+    <g transform="translate(50 145)">
+      <text x="0" y="0" font-size="11.8" fill="#EEF4F7">View repository</text>
+      <path d="M92 -4 H113 M106 -10 L113 -4 L106 2" fill="none" stroke="#E1BE72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 7 H115" stroke="#4B6882" stroke-width="1"/>
+    </g>
   </g>
-  <path d="M755 128h25l10-18 13 32 13-23 11 9h85" fill="none" stroke="#E6BD68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+
+  <g aria-hidden="true">
+    <path d="M635 52 C720 46,820 60,930 50" fill="none" stroke="#4B6882" stroke-width=".85" opacity=".65"/><path d="M635 61 C720 55,820 69,930 59" fill="none" stroke="#4B6882" stroke-width=".85" opacity=".65"/><path d="M635 70 C720 64,820 78,930 68" fill="none" stroke="#4B6882" stroke-width=".85" opacity=".65"/><path d="M635 79 C720 73,820 87,930 77" fill="none" stroke="#4B6882" stroke-width=".85" opacity=".65"/><path d="M635 88 C720 82,820 96,930 86" fill="none" stroke="#4B6882" stroke-width=".85" opacity=".65"/>
+    <g fill="#E1BE72" opacity=".9">
+      <circle cx="684" cy="67" r="4"/>
+      <path d="M688 67 V47" stroke="#E1BE72" stroke-width="1.5"/>
+      <circle cx="746" cy="79" r="4"/>
+      <path d="M750 79 V56" stroke="#E1BE72" stroke-width="1.5"/>
+    </g>
+    <text x="790" y="69" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18" fill="#8EC7E0">$</text>
+    <text x="818" y="71" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" fill="#EEF4F7">echo</text>
+    <text x="866" y="71" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" fill="#D69DA8">resonance</text>
+    <rect x="900" y="89" width="18" height="3" rx="1.5" fill="#E1BE72"/>
+    <text x="786" y="106" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.2" fill="#A9BFD0">pipe | redirect &gt; history ↑</text>
+    <path d="M666 130 C702 119,711 94,733 94 C755 94,761 125,787 125 C821 125,835 93,867 94" fill="none" stroke="#E1BE72" stroke-width="2" opacity=".7"/>
+    <path d="M864 95 C878 82,900 82,913 96 C924 109,917 128,900 135" fill="none" stroke="#E1BE72" stroke-width="3.2" opacity=".75"/>
+    <path d="M907 83 C924 81,936 90,941 106" fill="none" stroke="#E1BE72" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    
+    <g transform="translate(687 126) rotate(10) scale(0.34)" opacity="0.42">
+      <path d="M0 0 C18 -12,36 -10,52 0 C34 2,18 9,0 24 C10 10,13 5,0 0Z"
+            fill="none" stroke="#8EC7E0" stroke-width="1.5"/>
+      <path d="M2 2 L46 1" stroke="#8EC7E0" stroke-width="1"/>
+      <path d="M14 1 L8 9 M24 1 L16 13 M34 1 L27 11"
+            stroke="#8EC7E0" stroke-width=".8" opacity=".7"/>
+    </g>
+    
+  </g>
 </svg>

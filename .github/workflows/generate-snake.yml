@@ -23,7 +23,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Generate selected-project language cards
+      - name: Generate GitHub activity cards
         run: node .github/scripts/generate-language-card.mjs
         env:
           GITHUB_OWNER: ${{ github.repository_owner }}

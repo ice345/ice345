@@ -1,18 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
-  <title id="title">Anime Horizon</title>
-  <desc id="desc">An anime discovery and seasonal guide.</desc>
-  <rect x="1" y="1" width="958" height="174" rx="18" fill="#F8FAF7" stroke="#D8E6EA" stroke-width="2"/>
-  <path d="M715 14c58 22 111 17 176-5-32 23-57 39-87 59-27-27-56-43-89-54Z" fill="#A9D8E8" opacity=".24"/><path d="M837 18c25 2 47-3 71-14-12 14-23 26-39 38-9-10-19-18-32-24Z" fill="#5D82B3" opacity=".55"/>
-  <rect x="25" y="24" width="5" height="128" rx="2.5" fill="#5D82B3"/>
-  <path d="M48 52c10-17 24-22 38-11-8 2-14 7-18 14 9-4 18-3 28 2-20 8-36 7-48-5Z" fill="#5D82B3"/>
-  <text x="112" y="54" fill="#252B46" font-size="24" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Anime Horizon</text>
-  <rect x="774" y="27" width="154" height="29" rx="14.5" fill="#E4EFF5"/><text x="851" y="47" text-anchor="middle" fill="#416F96" font-size="12" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">LIVE SITE ↗</text>
-  <text x="48" y="91" fill="#4D5D70" font-size="16" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">Anime discovery and seasonal guide with AniList data and local caching.</text>
-  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">
-    <rect x="48" y="116" width="101" height="28" rx="8" fill="#E7EFF7"/><text x="98.5" y="135" text-anchor="middle" fill="#5D82B3">TypeScript</text>
-    <rect x="157" y="116" width="63" height="28" rx="8" fill="#F1E6EB"/><text x="188.5" y="135" text-anchor="middle" fill="#A66C81">React</text>
-    <rect x="228" y="116" width="55" height="28" rx="8" fill="#F1E6EB"/><text x="255.5" y="135" text-anchor="middle" fill="#A66C81">Vite</text>
-    <rect x="291" y="116" width="74" height="28" rx="8" fill="#E7EFF7"/><text x="328" y="135" text-anchor="middle" fill="#5D82B3">AniList</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="176" viewBox="0 0 960 176" role="img" aria-labelledby="title desc">
+  <title id="title">Anime Horizon — ice345 featured project</title>
+  <desc id="desc">Anime discovery and seasonal guide with AniList data and AI-assisted recommendations.. TypeScript · React · Vite · AniList.</desc>
+  
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBFAF6"/>
+      <stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <radialGradient id="washBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#A9D8E8" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#A9D8E8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="washPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#E8B5BE" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#E8B5BE" stop-opacity="0"/>
+    </radialGradient>
+<filter id="blur20" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="958" height="174" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="1" y="1" width="958" height="174" rx="24" fill="url(#bg)"/>
+    <ellipse cx="820" cy="22" rx="225" ry="110" fill="url(#washBlue)" filter="url(#blur20)"/>
+    <ellipse cx="710" cy="175" rx="185" ry="86" fill="url(#washPink)" filter="url(#blur20)"/>
+</g>
+
+  <rect x="1" y="1" width="958" height="174" rx="24"
+        fill="none" stroke="#B8D8E5" stroke-opacity=".62"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="50" y="31" font-size="10.5" letter-spacing="2.4" fill="#67839A">01 · ANIME</text>
+    <text x="50" y="67" font-size="29" font-weight="650" fill="#294866">Anime Horizon</text>
+    <text x="50" y="94" font-size="14.3" fill="#67839A">Anime discovery and seasonal guide with AniList data and AI-assisted recommendations.</text>
+    <text x="50" y="117" font-size="12.3" letter-spacing=".6" fill="#4F7FA8">TypeScript · React · Vite · AniList</text>
+    <g transform="translate(50 145)">
+      <text x="0" y="0" font-size="11.8" fill="#294866">View repository</text>
+      <path d="M92 -4 H113 M106 -10 L113 -4 L106 2" fill="none" stroke="#C79A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 7 H115" stroke="#B8D8E5" stroke-width="1"/>
+    </g>
   </g>
-  <text x="912" y="136" text-anchor="end" fill="#5D82B3" font-size="14" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">anime.050626.xyz</text>
+
+  <g aria-hidden="true">
+    <path d="M646 124 C715 85,796 86,900 35" fill="none" stroke="#B8D8E5" stroke-width="1.2" stroke-dasharray="3 8" opacity=".8"/>
+    <circle cx="696" cy="103" r="3.5" fill="#E8B5BE"/>
+    <circle cx="759" cy="81" r="3.5" fill="#78B7D3"/>
+    <circle cx="826" cy="58" r="3.5" fill="#CFE2D8"/>
+    <circle cx="892" cy="38" r="3.5" fill="#C79A45"/>
+    <path d="M688 132 C742 118,814 119,914 136" fill="none" stroke="#78B7D3" stroke-width="1" opacity=".4"/>
+    
+    <g transform="translate(804 43) scale(0.78 0.78)" opacity="0.85">
+      <path d="M0 12 C10 0,27 -2,42 8 C31 7,22 11,14 19 C26 19,36 23,44 31
+               C26 28,12 25,0 16 C-8 20,-15 21,-23 18 C-15 15,-8 13,0 12Z"
+            fill="#4F7FA8"/>
+      <circle cx="25" cy="8" r="1.5" fill="#FBFAF6"/>
+    </g>
+    
+    
+    <g transform="translate(878 94) scale(-0.42 0.42)" opacity="0.48">
+      <path d="M0 12 C10 0,27 -2,42 8 C31 7,22 11,14 19 C26 19,36 23,44 31
+               C26 28,12 25,0 16 C-8 20,-15 21,-23 18 C-15 15,-8 13,0 12Z"
+            fill="#4F7FA8"/>
+      <circle cx="25" cy="8" r="1.5" fill="#FBFAF6"/>
+    </g>
+    
+    
+    <g transform="translate(692 45) rotate(-16) scale(0.55)" opacity="0.65">
+      <path d="M0 0 C18 -12,36 -10,52 0 C34 2,18 9,0 24 C10 10,13 5,0 0Z"
+            fill="none" stroke="#4F7FA8" stroke-width="1.5"/>
+      <path d="M2 2 L46 1" stroke="#4F7FA8" stroke-width="1"/>
+      <path d="M14 1 L8 9 M24 1 L16 13 M34 1 L27 11"
+            stroke="#4F7FA8" stroke-width=".8" opacity=".7"/>
+    </g>
+    
+    
+    <g transform="translate(874 123) rotate(18) scale(0.45)" opacity="0.55">
+      <path d="M0 0 C18 -12,36 -10,52 0 C34 2,18 9,0 24 C10 10,13 5,0 0Z"
+            fill="none" stroke="#4F7FA8" stroke-width="1.5"/>
+      <path d="M2 2 L46 1" stroke="#4F7FA8" stroke-width="1"/>
+      <path d="M14 1 L8 9 M24 1 L16 13 M34 1 L27 11"
+            stroke="#4F7FA8" stroke-width=".8" opacity=".7"/>
+    </g>
+    
+    
+    <g transform="translate(739 124) scale(0.75)">
+      <ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(0)" opacity="0.65"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(72)" opacity="0.65"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(144)" opacity="0.65"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(216)" opacity="0.65"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(288)" opacity="0.65"/>
+      <circle cx="0" cy="0" r="1.8" fill="#C79A45" opacity=".8"/>
+    </g>
+    
+    
+    <g transform="translate(779 105) scale(0.58)">
+      <ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(0)" opacity="0.48"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(72)" opacity="0.48"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(144)" opacity="0.48"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(216)" opacity="0.48"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(288)" opacity="0.48"/>
+      <circle cx="0" cy="0" r="1.8" fill="#C79A45" opacity=".8"/>
+    </g>
+    
+    
+    <g transform="translate(918 54) scale(0.52)">
+      <ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(0)" opacity="0.5"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(72)" opacity="0.5"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(144)" opacity="0.5"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(216)" opacity="0.5"/><ellipse cx="0" cy="-5" rx="2.4" ry="5" fill="#78B7D3" transform="rotate(288)" opacity="0.5"/>
+      <circle cx="0" cy="0" r="1.8" fill="#C79A45" opacity=".8"/>
+    </g>
+    
+    <path d="M719 143 C760 124,817 127,925 151" fill="none" stroke="#4F7FA8" stroke-width=".9" opacity=".34"/>
+    <text x="688" y="156" font-size="9" letter-spacing="2" fill="#67839A" font-family="ui-sans-serif,system-ui">SEASONS · STORIES · DISCOVERY</text>
+  </g>
 </svg>
