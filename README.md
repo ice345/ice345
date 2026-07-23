@@ -21,8 +21,9 @@
 <p align="center">
   <a href="https://github.com/ice345"><img alt="GitHub profile" src="https://img.shields.io/badge/GitHub-ice345-5D82B3?style=flat-square&amp;logo=github&amp;logoColor=white" /></a>
   <a href="https://myblog.050626.xyz"><img alt="ICEのBlog" src="https://img.shields.io/badge/ICE%E3%81%AEBlog-Visit-D59AAD?style=flat-square" /></a>
-  <a href="https://github.com/ice345/markdown-table-wrap.nvim"><img alt="markdown-table-wrap.nvim" src="https://img.shields.io/badge/Neovim-markdown--table--wrap.nvim-D6A64B?style=flat-square&amp;logo=neovim&amp;logoColor=white" /></a>
   <a href="https://anime.050626.xyz/"><img alt="Anime Horizon live site" src="https://img.shields.io/badge/Anime-Horizon-7FA6C9?style=flat-square&amp;logo=react&amp;logoColor=white" /></a>
+  <a href="https://discord.com/channels/@me"><img alt="Discord" src="https://img.shields.io/badge/Discord-Community-7FA6C9?style=flat-square&amp;logo=discord&amp;logoColor=white" /></a>
+  <a href="https://www.reddit.com/user/NoMessage4589/"><img alt="Reddit" src="https://img.shields.io/badge/Reddit-NoMessage4589-D6A64B?style=flat-square&amp;logo=reddit&amp;logoColor=white" /></a>
 </p>
 
 ## About Me
@@ -131,16 +132,11 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 <p align="center"><sub>Current study focus: Linux kernel · eBPF · systems programming · Go · OCaml</sub></p>
 
-<p align="center">
-  <a href="https://github.com/ice345"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-ice345-5D82B3?style=flat-square&amp;logo=github&amp;logoColor=white" /></a>
-  <a href="https://myblog.050626.xyz"><img alt="Blog" src="https://img.shields.io/badge/Blog-ICE%E3%81%AEBlog-D59AAD?style=flat-square" /></a>
-  <img alt="Discord" src="https://img.shields.io/badge/Community-Discord-7FA6C9?style=flat-square&amp;logo=discord&amp;logoColor=white" />
-  <img alt="Reddit" src="https://img.shields.io/badge/Community-Reddit-D6A64B?style=flat-square&amp;logo=reddit&amp;logoColor=white" />
-</p>
-
 ## GitHub Activity
 
-<div align="center">
+<table align="center">
+  <tr>
+    <td width="50%" valign="top">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -156,9 +152,8 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
       width="100%"
     />
   </picture>
-
-  <br />
-
+    </td>
+    <td width="50%" valign="top">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -170,13 +165,13 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
     />
     <img
       src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
-      alt="Language distribution across selected original projects"
+      alt="Programming language distribution across original public repositories"
       width="100%"
     />
   </picture>
-</div>
-
-<p align="center"><sub>Generated daily from public GitHub data. Rolling activity covers the previous 12 months; language share describes repository files, not proficiency.</sub></p>
+    </td>
+  </tr>
+</table>
 
 ## Contribution Snake
 
@@ -197,8 +192,6 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
     />
   </picture>
 </div>
-
-<p align="center"><sub>Generated daily on the dedicated <code>output</code> branch.</sub></p>
 
 ## Favorite Works
 
