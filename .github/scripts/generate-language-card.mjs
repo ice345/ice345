@@ -2,11 +2,6 @@ import { mkdirSync, writeFileSync } from "node:fs";
 
 const owner = process.env.GITHUB_OWNER || "ice345";
 const token = process.env.GITHUB_TOKEN;
-const repositories = [
-  "markdown-table-wrap.nvim",
-  "Anime-horizon_pro",
-  "anishell",
-];
 const ignoredLanguages = new Set(["HTML", "CSS"]);
 
 const languageColors = {
@@ -147,11 +142,7 @@ async function getPullRequestCount(sinceDate) {
   return result.total_count;
 }
 
-async function getOverviewStats() {
-  const allRepositories = await getPublicRepositories();
-  const originalRepositories = allRepositories.filter(
-    (repository) => !repository.fork && !repository.archived,
-  );
+async function getOverviewStats(originalRepositories) {
   const since = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
   const sinceIso = since.toISOString();
   const sinceDate = sinceIso.slice(0, 10);
@@ -184,10 +175,9 @@ function renderCard(entries, themeName) {
     percent: (bytes / totalBytes) * 100,
     color: languageColors[language] || "#7FA6C9",
   }));
-  const subtitle = repositories.join(" · ");
   const rowMarkup = rows
     .map((row, index) => {
-      const y = 128 + index * 34;
+      const y = 96 + index * 30;
       const width = Math.max(4, (row.percent / 100) * 404);
       return `
     <circle cx="44" cy="${y - 5}" r="5" fill="${row.color}" />
@@ -197,23 +187,21 @@ function renderCard(entries, themeName) {
     <text x="652" y="${y}" class="percent" text-anchor="end">${row.percent.toFixed(1)}%</text>`;
     })
     .join("");
-  const height = 106 + rows.length * 34 + 22;
+  const height = 100 + rows.length * 30 + 16;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 ${height}" role="img" aria-labelledby="title desc">
-  <title id="title">Selected project languages</title>
-  <desc id="desc">Language distribution across ${escapeXml(subtitle)}.</desc>
+  <title id="title">Programming languages</title>
+  <desc id="desc">Programming language distribution across original public repositories.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     .heading { fill: ${theme.title}; font-size: 22px; font-weight: 700; }
-    .subtitle { fill: ${theme.muted}; font-size: 12px; }
     .label { fill: ${theme.text}; font-size: 14px; font-weight: 600; }
     .percent { fill: ${theme.muted}; font-size: 13px; font-variant-numeric: tabular-nums; }
   </style>
   <rect x="1" y="1" width="698" height="${height - 2}" rx="18" fill="${theme.background}" stroke="${theme.border}" stroke-width="2" />
   <rect x="30" y="30" width="5" height="48" rx="2.5" fill="${theme.accent}" />
-  <text x="50" y="52" class="heading">Selected Project Languages</text>
-  <text x="50" y="73" class="subtitle">${escapeXml(subtitle)}</text>${rowMarkup}
+  <text x="50" y="52" class="heading">Programming Languages</text>${rowMarkup}
 </svg>
 `;
 }
@@ -237,29 +225,34 @@ function renderOverviewCard(stats, themeName) {
     .join("");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 226" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 196" role="img" aria-labelledby="title desc">
   <title id="title">GitHub overview</title>
   <desc id="desc">Public original repositories, stars, commits, and pull requests for ${escapeXml(owner)}.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     .heading { fill: ${theme.title}; font-size: 22px; font-weight: 700; }
-    .subtitle { fill: ${theme.muted}; font-size: 12px; }
     .metric { fill: ${theme.title}; font-size: 28px; font-weight: 750; font-variant-numeric: tabular-nums; }
     .metric-label { fill: ${theme.text}; font-size: 13px; font-weight: 600; }
-    .footer { fill: ${theme.muted}; font-size: 11px; }
   </style>
-  <rect x="1" y="1" width="698" height="224" rx="18" fill="${theme.background}" stroke="${theme.border}" stroke-width="2" />
+  <rect x="1" y="1" width="698" height="194" rx="18" fill="${theme.background}" stroke="${theme.border}" stroke-width="2" />
   <rect x="30" y="30" width="5" height="48" rx="2.5" fill="${theme.accent}" />
   <text x="50" y="52" class="heading">GitHub Overview</text>
-  <text x="50" y="73" class="subtitle">Public activity with forks excluded from repository and star totals</text>${metricMarkup}
-  <path d="M30 199h155l16-7 16 7h156l16-7 16 7h265" fill="none" stroke="${theme.border}" stroke-width="2" stroke-linecap="round" />
-  <text x="350" y="215" class="footer" text-anchor="middle">Rolling 12 months · generated daily from the GitHub API</text>
+  ${metricMarkup}
 </svg>
 `;
 }
 
 const aggregate = new Map();
-const results = await Promise.all(repositories.map(getLanguages));
+const publicRepositories = await getPublicRepositories();
+const originalRepositories = publicRepositories.filter(
+  (repository) =>
+    !repository.fork &&
+    !repository.archived &&
+    repository.name !== owner,
+);
+const results = await Promise.all(
+  originalRepositories.map(({ name }) => getLanguages(name)),
+);
 
 for (const languages of results) {
   for (const [language, bytes] of Object.entries(languages)) {
@@ -275,14 +268,14 @@ const entries = [...aggregate.entries()]
   .slice(0, 5);
 
 if (entries.length === 0) {
-  throw new Error("No language data was returned for the selected repositories");
+  throw new Error("No language data was returned for original repositories");
 }
 
 mkdirSync("dist", { recursive: true });
 writeFileSync("dist/github-languages-light.svg", renderCard(entries, "light"));
 writeFileSync("dist/github-languages-dark.svg", renderCard(entries, "dark"));
 
-const overviewStats = await getOverviewStats();
+const overviewStats = await getOverviewStats(originalRepositories);
 writeFileSync(
   "dist/github-overview-light.svg",
   renderOverviewCard(overviewStats, "light"),
