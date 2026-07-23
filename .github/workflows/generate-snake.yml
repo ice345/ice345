@@ -1,6 +1,9 @@
 name: Generate profile activity assets
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:

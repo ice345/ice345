@@ -137,38 +137,28 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 <table align="center">
   <tr>
     <td width="50%" valign="top">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-dark.svg"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
-    />
     <img
-      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg#gh-light-mode-only"
       alt="GitHub overview showing original repositories, stars, commits, and pull requests"
       width="100%"
     />
-  </picture>
+    <img
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-dark.svg#gh-dark-mode-only"
+      alt="GitHub overview showing original repositories, stars, commits, and pull requests"
+      width="100%"
+    />
     </td>
     <td width="50%" valign="top">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-dark.svg"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
-    />
     <img
-      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg#gh-light-mode-only"
       alt="Programming language distribution across original public repositories"
       width="100%"
     />
-  </picture>
+    <img
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-dark.svg#gh-dark-mode-only"
+      alt="Programming language distribution across original public repositories"
+      width="100%"
+    />
     </td>
   </tr>
 </table>
