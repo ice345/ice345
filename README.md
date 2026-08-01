@@ -52,7 +52,7 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   </picture>
 </a>
 
-<a href="https://anime.050626.xyz/">
+<a href="https://github.com/ice345/Anime-horizon_pro">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/anime-horizon-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/projects/anime-horizon-light.svg" />
