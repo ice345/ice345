@@ -85,31 +85,15 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=dark&amp;perline=10"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cpy%2Cc%2Cocaml%2Cbash%2Cmd&amp;theme=dark&amp;perline=7"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=light&amp;perline=10"
+      srcset="https://skillicons.dev/icons?i=rust%2Clua%2Cpy%2Cc%2Cocaml%2Cbash%2Cmd&amp;theme=light&amp;perline=7"
     />
     <img
-      src="https://skillicons.dev/icons?i=rust%2Clua%2Cts%2Cjs%2Cpy%2Cc%2Cocaml%2Cgo%2Cbash%2Cmd&amp;theme=light&amp;perline=10"
-      alt="Rust, Lua, TypeScript, JavaScript, Python, C, OCaml, Go, Bash, and Markdown"
-    />
-  </picture>
-
-  <p><strong>Web · runtime</strong></p>
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=dark&amp;perline=5"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=light&amp;perline=5"
-    />
-    <img
-      src="https://skillicons.dev/icons?i=react%2Cvite%2Cnodejs%2Chtml%2Ccss&amp;theme=light&amp;perline=5"
-      alt="React, Vite, Node.js, HTML, and CSS"
+      src="https://skillicons.dev/icons?i=rust%2Clua%2Cpy%2Cc%2Cocaml%2Cbash%2Cmd&amp;theme=light&amp;perline=7"
+      alt="Rust, Lua, Python, C, OCaml, Bash, and Markdown"
     />
   </picture>
 
@@ -130,7 +114,7 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   </picture>
 </div>
 
-<p align="center"><sub>Current study focus: Linux kernel · eBPF · systems programming · Go · OCaml</sub></p>
+<p align="center"><sub>Current study focus: Linux kernel · eBPF · systems programming · OCaml</sub></p>
 
 ## GitHub Activity
 
