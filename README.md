@@ -30,7 +30,7 @@
 
 Hi, I'm **ice345**. I build small tools around Neovim, systems programming, and anime discovery.
 
-I work mainly with Rust, Lua, and TypeScript, and I am currently exploring the Linux kernel, eBPF fundamentals, operating systems, and open-source collaboration. I enjoy learning through issues, reviews, pull requests, and projects that turn curiosity into something useful.
+I focus on Rust and Lua, and I am currently exploring the Linux kernel, eBPF fundamentals, operating systems, and open-source collaboration. I enjoy learning through issues, reviews, pull requests, and projects that turn curiosity into something useful.
 
 Away from the terminal, I enjoy Japanese animation and music—especially *響け！ユーフォニアム* and *リズと青い鳥*.
 
@@ -44,39 +44,32 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 ## Featured Projects
 
-<a href="https://github.com/ice345/markdown-table-wrap.nvim">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/markdown-table-wrap-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/markdown-table-wrap-light.svg" />
-    <img src="./assets/projects/markdown-table-wrap-light.svg" alt="markdown-table-wrap.nvim — a Neovim plugin for readable wrapped Markdown tables" width="100%" />
-  </picture>
-</a>
-
-<a href="https://github.com/ice345/Anime-horizon_pro">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/anime-horizon-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/anime-horizon-light.svg" />
-    <img src="./assets/projects/anime-horizon-light.svg" alt="Anime Horizon — an anime discovery and seasonal guide" width="100%" />
-  </picture>
-</a>
-
-<a href="https://github.com/ice345/anishell">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/anishell-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/anishell-light.svg" />
-    <img src="./assets/projects/anishell-light.svg" alt="AniShell — a small Unix shell written in Rust" width="100%" />
-  </picture>
-</a>
-
-<a href="https://github.com/ice345/dotfiles">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects/dotfiles-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects/dotfiles-light.svg" />
-    <img src="./assets/projects/dotfiles-light.svg" alt="dotfiles — cross-platform Linux and macOS configuration managed with chezmoi" width="100%" />
-  </picture>
-</a>
-
-<p align="center"><sub>Anime Horizon opens the live site · <a href="https://github.com/ice345/Anime-horizon_pro">source repository</a></sub></p>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ice345/markdown-table-wrap.nvim">markdown-table-wrap.nvim</a></h3>
+      <p>Source-safe Markdown table wrapping.</p>
+      <p><code>Lua</code> <code>Neovim</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ice345/anishell">AniShell</a></h3>
+      <p>A Rust shell with pipes, redirects, and tab completion.</p>
+      <p><code>Rust</code> <code>Unix</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ice345/dotfiles">dotfiles</a></h3>
+      <p>A familiar setup across Linux and macOS.</p>
+      <p><code>chezmoi</code> <code>Linux</code> <code>macOS</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ice345/Anime-horizon_pro">Anime Horizon</a></h3>
+      <p>Discover anime and explore the seasons.</p>
+      <p><code>Web</code> <code>Anime</code> · <a href="https://anime.050626.xyz/">Live site ↗</a></p>
+    </td>
+  </tr>
+</table>
 
 ## Languages & Tools
 
@@ -118,7 +111,7 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 ## GitHub Activity
 
-<div align="center">
+<p align="center">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -131,12 +124,10 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
     <img
       src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
       alt="GitHub overview showing original repositories, stars, commits, and pull requests"
-      width="100%"
+      width="390"
     />
   </picture>
-</div>
 
-<div align="center">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -148,11 +139,11 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
     />
     <img
       src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
-      alt="Programming language distribution across original public repositories"
-      width="100%"
+      alt="Selected programming language distribution, excluding frontend languages"
+      width="390"
     />
   </picture>
-</div>
+</p>
 
 ## Contribution Snake
 

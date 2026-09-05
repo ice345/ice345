@@ -26,6 +26,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Check language filtering and card generation
+        run: node --test .github/scripts/generate-language-card.test.mjs
+
       - name: Generate GitHub activity cards
         run: node .github/scripts/generate-language-card.mjs
         env:

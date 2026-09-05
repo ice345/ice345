@@ -1,17 +1,58 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 const owner = process.env.GITHUB_OWNER || "ice345";
 const token = process.env.GITHUB_TOKEN;
-const ignoredLanguages = new Set(["HTML", "CSS"]);
+const config = JSON.parse(
+  readFileSync(new URL("../profile-config.json", import.meta.url), "utf8"),
+);
 
 const languageColors = {
-  TypeScript: "#3178C6",
   Lua: "#5D82B3",
   Rust: "#DEA584",
-  JavaScript: "#F1E05A",
-  Shell: "#89E051",
+  Shell: "#92AA87",
   Python: "#3572A5",
+  C: "#8C9EB2",
+  OCaml: "#C69B63",
+  Other: "#B1BDC4",
 };
+
+export function selectOriginalRepositories(repositories, account) {
+  return repositories.filter(
+    (repository) =>
+      !repository.fork &&
+      !repository.archived &&
+      !repository.private &&
+      repository.owner.login.toLowerCase() === account.toLowerCase() &&
+      repository.name.toLowerCase() !== account.toLowerCase(),
+  );
+}
+
+export function aggregateLanguages(results, excludedLanguages, maxLanguages = 6) {
+  if (!Number.isInteger(maxLanguages) || maxLanguages < 2 || maxLanguages > 6) {
+    throw new Error("maxLanguages must be an integer between 2 and 6");
+  }
+  const excluded = new Set(excludedLanguages.map((language) => language.toLowerCase()));
+  const aggregate = new Map();
+
+  for (const languages of results) {
+    for (const [language, bytes] of Object.entries(languages)) {
+      // Filter before both ranking and normalization; excluded bytes never enter Other.
+      if (!excluded.has(language.toLowerCase()) && Number.isFinite(bytes) && bytes > 0) {
+        aggregate.set(language, (aggregate.get(language) || 0) + bytes);
+      }
+    }
+  }
+
+  const entries = [...aggregate.entries()].sort(
+    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+  );
+  if (entries.length <= maxLanguages) return entries;
+  return [
+    ...entries.slice(0, maxLanguages - 1),
+    ["Other", entries.slice(maxLanguages - 1).reduce((sum, [, bytes]) => sum + bytes, 0)],
+  ];
+}
 
 const themes = {
   light: {
@@ -167,46 +208,57 @@ function formatNumber(value) {
   return Number(value).toLocaleString("en-US");
 }
 
-function renderCard(entries, themeName) {
+function cardFrame(themeName, title, description, content) {
   const theme = themes[themeName];
-  const totalBytes = entries.reduce((sum, [, bytes]) => sum + bytes, 0);
-  const rows = entries.map(([language, bytes]) => ({
-    language,
-    percent: (bytes / totalBytes) * 100,
-    color: languageColors[language] || "#7FA6C9",
-  }));
-  const rowMarkup = rows
-    .map((row, index) => {
-      const y = 96 + index * 30;
-      const width = Math.max(4, (row.percent / 100) * 404);
-      return `
-    <circle cx="44" cy="${y - 5}" r="5" fill="${row.color}" />
-    <text x="58" y="${y}" class="label">${escapeXml(row.language)}</text>
-    <rect x="196" y="${y - 14}" width="404" height="10" rx="5" fill="${theme.track}" />
-    <rect x="196" y="${y - 14}" width="${width.toFixed(1)}" height="10" rx="5" fill="${row.color}" />
-    <text x="652" y="${y}" class="percent" text-anchor="end">${row.percent.toFixed(1)}%</text>`;
-    })
-    .join("");
-  const height = 100 + rows.length * 30 + 16;
-
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 ${height}" role="img" aria-labelledby="title desc">
-  <title id="title">Programming languages</title>
-  <desc id="desc">Programming language distribution across original public repositories.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="210" viewBox="0 0 420 210" role="img" aria-labelledby="title desc">
+  <title id="title">${escapeXml(title)}</title>
+  <desc id="desc">${escapeXml(description)}</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .heading { fill: ${theme.title}; font-size: 22px; font-weight: 700; }
-    .label { fill: ${theme.text}; font-size: 14px; font-weight: 600; }
+    .heading { fill: ${theme.title}; font-size: 19px; font-weight: 650; }
+    .label { fill: ${theme.text}; font-size: 14px; }
     .percent { fill: ${theme.muted}; font-size: 13px; font-variant-numeric: tabular-nums; }
+    .metric { fill: ${theme.title}; font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; }
   </style>
-  <rect x="1" y="1" width="698" height="${height - 2}" rx="18" fill="${theme.background}" stroke="${theme.border}" stroke-width="2" />
-  <rect x="30" y="30" width="5" height="48" rx="2.5" fill="${theme.accent}" />
-  <text x="50" y="52" class="heading">Programming Languages</text>${rowMarkup}
+  <rect x="0.5" y="0.5" width="419" height="209" rx="14" fill="${theme.background}" stroke="${theme.border}" />
+  <path d="M24 30 H38" stroke="${theme.accent}" stroke-width="3" stroke-linecap="round" />
+  <text x="48" y="36" class="heading">${escapeXml(title)}</text>
+  ${content}
 </svg>
 `;
 }
 
-function renderOverviewCard(stats, themeName) {
+export function renderCard(entries, themeName) {
+  const theme = themes[themeName];
+  if (entries.length === 0) {
+    return cardFrame(themeName, "Programming Languages", "No language data remains after filtering.",
+      '<text x="24" y="113" class="label">No matching language data yet.</text>');
+  }
+  const totalBytes = entries.reduce((sum, [, bytes]) => sum + bytes, 0);
+  let offset = 24;
+  const segments = entries.map(([language, bytes]) => {
+    const width = (bytes / totalBytes) * 372;
+    const segment = `<rect x="${offset.toFixed(3)}" y="62" width="${width.toFixed(3)}" height="12" fill="${languageColors[language] || "#7FA6C9"}" />`;
+    offset += width;
+    return segment;
+  }).join("");
+  const legend = entries.map(([language, bytes], index) => {
+    const x = 24 + (index % 2) * 196;
+    const y = 111 + Math.floor(index / 2) * 35;
+    return `
+    <circle cx="${x + 4}" cy="${y - 5}" r="4" fill="${languageColors[language] || "#7FA6C9"}" />
+    <text x="${x + 16}" y="${y}" class="label">${escapeXml(language)}</text>
+    <text x="${x + 174}" y="${y}" class="percent" text-anchor="end">${((bytes / totalBytes) * 100).toFixed(1)}%</text>`;
+  }).join("");
+  return cardFrame(themeName, "Programming Languages",
+    "Language byte share in original public repositories after configured exclusions; not a measure of proficiency.",
+    `<defs><clipPath id="bar"><rect x="24" y="62" width="372" height="12" rx="6" /></clipPath></defs>
+    <rect x="24" y="62" width="372" height="12" rx="6" fill="${theme.track}" />
+    <g clip-path="url(#bar)">${segments}</g>${legend}`);
+}
+
+export function renderOverviewCard(stats, themeName) {
   const theme = themes[themeName];
   const metrics = [
     [formatNumber(stats.stars), "Stars earned"],
@@ -214,73 +266,37 @@ function renderOverviewCard(stats, themeName) {
     [formatNumber(stats.commits), "Commits · 12 mo"],
     [formatNumber(stats.pullRequests), "PRs opened · 12 mo"],
   ];
-  const metricMarkup = metrics
-    .map(([value, label], index) => {
-      const x = 30 + index * 166;
-      return `
-    <rect x="${x}" y="96" width="142" height="82" rx="14" fill="${theme.track}" />
-    <text x="${x + 71}" y="132" class="metric" text-anchor="middle">${escapeXml(value)}</text>
-    <text x="${x + 71}" y="158" class="metric-label" text-anchor="middle">${escapeXml(label)}</text>`;
-    })
-    .join("");
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 196" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub overview</title>
-  <desc id="desc">Public original repositories, stars, commits, and pull requests for ${escapeXml(owner)}.</desc>
-  <style>
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .heading { fill: ${theme.title}; font-size: 22px; font-weight: 700; }
-    .metric { fill: ${theme.title}; font-size: 28px; font-weight: 750; font-variant-numeric: tabular-nums; }
-    .metric-label { fill: ${theme.text}; font-size: 13px; font-weight: 600; }
-  </style>
-  <rect x="1" y="1" width="698" height="194" rx="18" fill="${theme.background}" stroke="${theme.border}" stroke-width="2" />
-  <rect x="30" y="30" width="5" height="48" rx="2.5" fill="${theme.accent}" />
-  <text x="50" y="52" class="heading">GitHub Overview</text>
-  ${metricMarkup}
-</svg>
-`;
+  const metricMarkup = metrics.map(([value, label], index) => {
+    const x = 24 + (index % 2) * 196;
+    const y = 91 + Math.floor(index / 2) * 72;
+    return `
+    <text x="${x}" y="${y}" class="metric">${escapeXml(value)}</text>
+    <text x="${x}" y="${y + 22}" class="label">${escapeXml(label)}</text>`;
+  }).join("");
+  return cardFrame(themeName, "GitHub Overview",
+    `Public original repositories, stars, commits, and pull requests for ${owner}.`,
+    `<path d="M24 130 H396" stroke="${theme.border}" />${metricMarkup}`);
 }
 
-const aggregate = new Map();
-const publicRepositories = await getPublicRepositories();
-const originalRepositories = publicRepositories.filter(
-  (repository) =>
-    !repository.fork &&
-    !repository.archived &&
-    repository.name !== owner,
-);
-const results = await Promise.all(
-  originalRepositories.map(({ name }) => getLanguages(name)),
-);
+export async function generateCards() {
+  const publicRepositories = await getPublicRepositories();
+  const originalRepositories = selectOriginalRepositories(publicRepositories, owner);
+  const results = await mapWithConcurrency(
+    originalRepositories, 4, ({ name }) => getLanguages(name),
+  );
+  const entries = aggregateLanguages(results, config.excludedLanguages, config.maxLanguages);
+  const overviewStats = await getOverviewStats(originalRepositories);
 
-for (const languages of results) {
-  for (const [language, bytes] of Object.entries(languages)) {
-    if (!ignoredLanguages.has(language)) {
-      aggregate.set(language, (aggregate.get(language) || 0) + bytes);
-    }
+  // Fetch all data before writing so a failed API request cannot publish a partial set.
+  mkdirSync("dist", { recursive: true });
+  for (const theme of Object.keys(themes)) {
+    writeFileSync(`dist/github-languages-${theme}.svg`, renderCard(entries, theme));
+    writeFileSync(`dist/github-overview-${theme}.svg`, renderOverviewCard(overviewStats, theme));
   }
+  console.log(`Generated activity cards from ${originalRepositories.length} original public repositories.`);
+  console.log(`Displayed languages: ${entries.map(([language]) => language).join(", ") || "none"}`);
 }
 
-const entries = [...aggregate.entries()]
-  .filter(([, bytes]) => Number.isFinite(bytes) && bytes > 0)
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 5);
-
-if (entries.length === 0) {
-  throw new Error("No language data was returned for original repositories");
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await generateCards();
 }
-
-mkdirSync("dist", { recursive: true });
-writeFileSync("dist/github-languages-light.svg", renderCard(entries, "light"));
-writeFileSync("dist/github-languages-dark.svg", renderCard(entries, "dark"));
-
-const overviewStats = await getOverviewStats(originalRepositories);
-writeFileSync(
-  "dist/github-overview-light.svg",
-  renderOverviewCard(overviewStats, "light"),
-);
-writeFileSync(
-  "dist/github-overview-dark.svg",
-  renderOverviewCard(overviewStats, "dark"),
-);
