@@ -1,0 +1,20 @@
+{
+  "excludedLanguages": [
+    "JavaScript",
+    "TypeScript",
+    "JSX",
+    "TSX",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Sass",
+    "Less",
+    "Stylus",
+    "Vue",
+    "Svelte",
+    "Astro",
+    "MDX",
+    "CoffeeScript"
+  ],
+  "maxLanguages": 6
+}
