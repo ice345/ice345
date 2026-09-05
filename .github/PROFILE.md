@@ -28,3 +28,7 @@ Generated artwork experiments and their prompts are kept locally in `assets/proj
 ## Activity layout
 
 Activity cards share a 420 × 210 canvas and display at up to 390px wide. They sit side by side when space permits and wrap onto separate lines on narrow screens. Their `<picture>` elements switch between the light and dark SVGs.
+
+The Activity URLs include `?v=2` so browsers request the compact cards separately from cached images of the previous layout. Bump this version in all six Activity `src`/`srcset` references when changing the card layout or language-selection policy. Daily data updates continue to use the same URLs and GitHub's normal cache lifetime.
+
+Before publishing a layout change, verify the actual SVGs on the `output` branch and the live profile after the workflow succeeds. A local preview that replaces remote URLs with `dist/` files cannot detect stale remote image caches.

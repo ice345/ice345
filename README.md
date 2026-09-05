@@ -115,14 +115,14 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-dark.svg"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-dark.svg?v=2"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg?v=2"
     />
     <img
-      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg"
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-overview-light.svg?v=2"
       alt="GitHub overview showing original repositories, stars, commits, and pull requests"
       width="390"
     />
@@ -131,14 +131,14 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-dark.svg"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-dark.svg?v=2"
     />
     <source
       media="(prefers-color-scheme: light)"
-      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
+      srcset="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg?v=2"
     />
     <img
-      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg"
+      src="https://raw.githubusercontent.com/ice345/ice345/output/github-languages-light.svg?v=2"
       alt="Selected programming language distribution, excluding frontend languages"
       width="390"
     />
