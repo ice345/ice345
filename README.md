@@ -44,32 +44,81 @@ Away from the terminal, I enjoy Japanese animation and music—especially *響�
 
 ## Featured Projects
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ice345/markdown-table-wrap.nvim">markdown-table-wrap.nvim</a></h3>
-      <p>Source-safe Markdown table wrapping.</p>
-      <p><code>Lua</code> <code>Neovim</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ice345/anishell">AniShell</a></h3>
-      <p>A Rust shell with pipes, redirects, and tab completion.</p>
-      <p><code>Rust</code> <code>Unix</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ice345/dotfiles">dotfiles</a></h3>
-      <p>A familiar setup across Linux and macOS.</p>
-      <p><code>chezmoi</code> <code>Linux</code> <code>macOS</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/ice345/Anime-horizon_pro">Anime Horizon</a></h3>
-      <p>Discover anime and explore the seasons.</p>
-      <p><code>Web</code> <code>Anime</code> · <a href="https://anime.050626.xyz/">Live site ↗</a></p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/ice345/markdown-table-wrap.nvim">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="./assets/featured/markdown-table-wrap-dark.svg"
+      />
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="./assets/featured/markdown-table-wrap-light.svg"
+      />
+      <img
+        src="./assets/featured/markdown-table-wrap-light.svg"
+        alt="markdown-table-wrap.nvim — wraps Markdown pipe tables in Neovim without rewriting source"
+        width="390"
+      />
+    </picture>
+  </a>
+  <a href="https://github.com/ice345/anishell">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="./assets/featured/anishell-dark.svg"
+      />
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="./assets/featured/anishell-light.svg"
+      />
+      <img
+        src="./assets/featured/anishell-light.svg"
+        alt="AniShell — a Unix shell in Rust with pipes, redirects, and tests"
+        width="390"
+      />
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ice345/dotfiles">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="./assets/featured/dotfiles-dark.svg"
+      />
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="./assets/featured/dotfiles-light.svg"
+      />
+      <img
+        src="./assets/featured/dotfiles-light.svg"
+        alt="dotfiles — chezmoi-managed Linux and macOS configuration"
+        width="390"
+      />
+    </picture>
+  </a>
+  <a href="https://github.com/ice345/Anime-horizon_pro">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="./assets/featured/anime-horizon-dark.svg"
+      />
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="./assets/featured/anime-horizon-light.svg"
+      />
+      <img
+        src="./assets/featured/anime-horizon-light.svg"
+        alt="Anime Horizon — seasonal anime guide with AniList data and a live site"
+        width="390"
+      />
+    </picture>
+  </a>
+</p>
+
+<p align="center"><sub>Anime Horizon · <a href="https://anime.050626.xyz/">live site ↗</a></sub></p>
 
 ## Languages & Tools
 

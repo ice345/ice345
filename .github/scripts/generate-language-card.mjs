@@ -54,7 +54,7 @@ export function aggregateLanguages(results, excludedLanguages, maxLanguages = 6)
   ];
 }
 
-const themes = {
+export const themes = {
   light: {
     background: "#F8FAF7",
     border: "#DCE8D3",

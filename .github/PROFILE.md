@@ -17,11 +17,11 @@ node --test .github/scripts/generate-language-card.test.mjs
 GITHUB_TOKEN="$(gh auth token)" node .github/scripts/generate-language-card.mjs
 ```
 
-The generated SVGs are written to `dist/`, which is ignored by Git. The existing workflow runs the tests, generates the activity cards and snake, and publishes the assets to the `output` branch on pushes to `master`, daily, or by manual dispatch. README references those published URLs; local generation alone does not update the live profile.
+The generated activity SVGs are written to `dist/`, which is ignored by Git. The existing workflow runs the tests, generates the activity cards and snake, and publishes those assets to the `output` branch on pushes to `master`, daily, or by manual dispatch. README references those published URLs; local generation alone does not update the live activity cards.
 
 ## Featured projects
 
-Featured Projects uses four text cards with linked project names, short descriptions, and native code-style tags. It contains no images and uses GitHub's own light/dark styling.
+Featured Projects uses four 420 × 210 SVG cards in the same frame as the Activity cards. Copy is curated from the four repositories. The cards live in `assets/featured/` and are referenced from the README at 390px wide, like the banner. After changing copy, run `node .github/scripts/generate-featured-cards.mjs` and commit the SVGs. They are not published to the `output` branch.
 
 Generated artwork experiments and their prompts are kept locally in `assets/project-artwork/`. This entire directory is ignored by Git and is not required to render the README. The earlier tracked SVG covers remain in `assets/projects/` as unused assets.
 
